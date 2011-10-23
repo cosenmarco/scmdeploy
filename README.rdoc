@@ -1,0 +1,15 @@
+= SCMDeploy
+
+SCMDeploy is a ruby script that manages the deploy of your SCM controlled project.
+
+== How it works
+
+SCMDeploy analyze your working copy to obtain the current head revision identifier. 
+SCMDeploy then analyzes your repository to obtain the currently deployed revision identifier (through a file in the project deploy root). 
+SCMDeploy then obtains differences from the SCM and aligns the deployed copy to the current head revision.
+
+== Configuration
+
+SCMDeploy reads './scmdfile' to find the configuration. See scmdfile.example to see how to configure.
+You can specify an alternative configuration file through command line switches. Issue 'scmdeploy --help' to see how it works.
+Any command line option overrides those found in scmdfile.

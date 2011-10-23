@@ -1,0 +1,7 @@
+# This is sample configuration file
+
+self.protocol = :ftp
+self.scm = :svn
+self.connstring = "deply-user@my.domain.com"
+self.password = "my-ftp-strong-password"
+self.remotepath = "/path/to/deploy/root/directory"
