@@ -20,15 +20,11 @@ require THIS_DIR + '/ftp_helper'
 begin
    require 'rubygems'
    gem 'xml-simple'
-   gem 'pry'
 rescue LoadError, NameError
    SLogger.fatal "Required gem not found: " + $!.to_s
    puts $!.to_s
    exit 1
 end
-
-# TODO:remove me
-require 'pry'
 
 module SCMDeploy
 
