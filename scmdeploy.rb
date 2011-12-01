@@ -158,7 +158,6 @@ module SCMDeploy
 	       v.each {|path| process_svn_path_entry(path)}
 	    end
 	 end
-	 binding.pry
       end
 
       def process_svn_path_entry(path)
