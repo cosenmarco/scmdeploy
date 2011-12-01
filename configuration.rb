@@ -1,4 +1,5 @@
 require 'logger'
+require'cgi'
 module SCMDeploy
 
    class Configuration
@@ -21,7 +22,7 @@ module SCMDeploy
 
 	 if @connstring
 	    if @connstring =~ %r{((.*)@)?(.*)(:(\d+))?}
-	       @username, @host, @port = $2,$3,$5
+	       @username, @host, @port = CGI::unescape($2),CGI::unescape($3),$5
 	       @port ||= case @protocol
 			 when :ftp  then 21
 			 when :sftp then 22
