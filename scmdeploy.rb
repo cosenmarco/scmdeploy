@@ -1,16 +1,20 @@
+#!/usr/bin/env ruby
+
 # Author: Marco Cosentino
 # License: GPLv3
 
+THIS_FILE = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
+THIS_DIR = File.dirname(__FILE__)
 
 # Ruby stdlib requires
 require 'yaml'
 require 'tempfile'
 
 # Local requires
-require File.dirname(__FILE__) + '/configuration'
-require File.dirname(__FILE__) + '/cmdline_parser'
-require File.dirname(__FILE__) + '/slogger'
-require File.dirname(__FILE__) + '/ftp_helper'
+require THIS_DIR + '/configuration'
+require THIS_DIR + '/cmdline_parser'
+require THIS_DIR + '/slogger'
+require THIS_DIR + '/ftp_helper'
 
 # Ensure we have the needed gems
 begin
