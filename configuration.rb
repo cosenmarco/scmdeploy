@@ -35,6 +35,9 @@ module SCMDeploy
 
 	 # Adjust tailing slash
 	 (@remotepath += "/") unless @remotepath =~ %r{/$}
+
+         self.ignorelist = [] unless self.ignorelist.is_a? Array
+         self.ignorelist << "scmdfile"
       end
 
    end

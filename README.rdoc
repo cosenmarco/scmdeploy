@@ -13,3 +13,7 @@ SCMDeploy then obtains differences from the SCM and aligns the deployed copy to 
 SCMDeploy reads './scmdfile' to find the configuration. See scmdfile.example to see how to configure.
 You can specify an alternative configuration file through command line switches. Issue 'scmdeploy --help' to see how it works.
 Any command line option overrides those found in scmdfile.
+
+== Notes about 'scmdfile'
+
+You can include your 'scmdfile' in you SCM because SCMDeploy will ignore it during deploy operations (as it was always included in the ignore list).
