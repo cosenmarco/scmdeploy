@@ -3,7 +3,7 @@
 # Author: Marco Cosentino
 # License: GPLv3
 
-THIS_FILE = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
+THIS_FILE = File.expand_path( File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__ )
 THIS_DIR = File.dirname(THIS_FILE)
 
 # Ruby stdlib requires
